@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Főoldal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- Fejléc Bootstrap Navbar-ként -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="alaplap.html">Főoldal</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="elerhetosegek.html">Elérhetőségek</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header>
+        <img src="fejleckep.jpg" alt="Fejléckép">
+        <!-- Egyéb fejléc tartalom, például cím, navigációs menü, stb. -->
+    </header>
+<div class="container">
+    <h1></h1>
+    <section>
+        <h2>Bemutatkozás</h2>
+        <p>
+            Üdülőnk 6413 Kunfehértó, Szegfű u.1. sz. alatt található, egykoron Máv vasutas üdülőként működött. 
+
+            Három elkülönülő egységből áll, mely 8-8 és 4 fő fogadására alkalmas, ill 2-2 fő részére pótágyazható. 
+            
+            Az épületek különálló egységek, mindegyik hálószobákkal, nappalival, konyhával vagy teakonyhával, ill. vizesblokkal ( wc- zuhanyzó) rendelkezik. 
+            
+            A kertben nagyobb méretű hideg vizes medence, dézsafürdő és dézsa szauna található. 
+            
+            A parkolás az üdülő előtt lehetséges. 
+            
+            Az utca túloldalán, kb. 50 m-re található a strand bejárata. Szállásunkat leginkább kisebb társaságok részére ajánljuk (csapatépítés, legény-leánybúcsú).
+        </p>
+    </section>
+    <section>
+        <h2>1. Épület</h2>
+        <p>
+            8 fő elszállásolására alkalmas (2 fő pótágyazható) , 4 db 2 ágyas szobával rendelkezik. A konyhában gázfőző készülék, főző-sütő eszközök, hűtőszekrények állnak vendégeink rendelkezésére. 
+
+            A teraszon 14-16 fő egyidejű étkezésére van lehetőség. 
+        </p>
+        <div class="container">
+            <div class="sor">
+                <img src="img/1épület háló2.jpg" alt="Kép 1" onclick="megnyit(this)">
+                <img src="img/1épületkonyha.jpg" alt="Kép 2" onclick="megnyit(this)">
+                <img src="img/1épülettoalett.jpg" alt="Kép 3" onclick="megnyit(this)">
+                <img src="img/1épületzuhanyző.jpg" alt="Kép 4" onclick="megnyit(this)">
+            </div>
+            
+            <!-- Overlay (fedőréteg) -->
+            <div class="overlay" id="overlay" onclick="zar()">
+                <img id="nagyKep" alt="Nagy méretű kép">
+            </div>
+            
+            <script>
+                function megnyit(elem) {
+                    var nagyKep = document.getElementById("nagyKep");
+                    nagyKep.src = elem.src;
+                    document.getElementById("overlay").style.display = "flex";
+                }
+            
+                function zar() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
+        </div>
+    </section>
+    <section>
+        <h2>2. Épület</h2>
+        <p>
+            2 szinten 4-4 fő elszállásolására alkalmas (2 fő pótágyazható), szintenként 2 db 2 ágyas szobával rendelkezik. 
+            
+            A konyhában villany-főző készülék, főző-sütő eszközök, hűtőszekrény áll vendégeink rendelkezésére. 
+        </p>
+        <div class="container">
+            <div class="sor">
+                <img src="img/2épület konyha.jpg" alt="Kép 1" onclick="megnyit(this)">
+                <img src="img/2épületa.jpg" alt="Kép 2" onclick="megnyit(this)">
+                <img src="img/2épületb.jpg" alt="Kép 3" onclick="megnyit(this)">
+                <img src="img/2épületc.jpg" alt="Kép 4" onclick="megnyit(this)">
+                <img src="img/2épülethálóa.jpg" alt="Kép 5" onclick="megnyit(this)">
+                <img src="img/2épületnappali.jpg" alt="Kép 6" onclick="megnyit(this)">
+                <img src="img/2épületnappali2.jpg" alt="Kép 7" onclick="megnyit(this)">
+                <img src="img/2épületnappali3.jpg" alt="Kép 8" onclick="megnyit(this)">
+            </div>
+            
+            <!-- Overlay (fedőréteg) -->
+            <div class="overlay" id="overlay" onclick="zar()">
+                <img id="nagyKep" alt="Nagy méretű kép">
+            </div>
+            
+            <script>
+                function megnyit(elem) {
+                    var nagyKep = document.getElementById("nagyKep");
+                    nagyKep.src = elem.src;
+                    document.getElementById("overlay").style.display = "flex";
+                }
+            
+                function zar() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
+        </div>
+    </section>
+    <section>
+        <h2>3. Épület</h2>
+        <p>
+            2 db 2 ágyas szobával, konyhával, wc-zuhanyzóval, nappali helységgel rendelkező épület. A többi épülettől kissé távolabb. Parkolás a kerten belül lehetséges. 
+        </p>
+        <div class="container">
+            <div class="sor">
+                <img src="img/3épületa.jpg" alt="Kép 1" onclick="megnyit(this)">
+                <img src="img/3épületháló.jpg" alt="Kép 2" onclick="megnyit(this)">
+                <img src="img/3épületkonyha.jpg" alt="Kép 3" onclick="megnyit(this)">
+                <img src="img/3épületnappali.jpg" alt="Kép 4" onclick="megnyit(this)">
+                <img src="img/3épületwczuhanyzó.jpg" alt="Kép 5" onclick="megnyit(this)">
+            </div>
+            
+            <!-- Overlay (fedőréteg) -->
+            <div class="overlay" id="overlay" onclick="zar()">
+                <img id="nagyKep" alt="Nagy méretű kép">
+            </div>
+            
+            <script>
+                function megnyit(elem) {
+                    var nagyKep = document.getElementById("nagyKep");
+                    nagyKep.src = elem.src;
+                    document.getElementById("overlay").style.display = "flex";
+                }
+            
+                function zar() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
+        </div>
+    </section>
+    <section>
+        <h2>Kert</h2>
+        <p>
+            4,5m-es hideg vizes fürdőmedence, dézsa fürdő és szauna, igény esetén külső sátor áll vendégeink rendelkezésére.  
+        </p>
+        <div class="container">
+            <div class="sor">
+                <img src="img/kert1.jpg" alt="Kép 1" onclick="megnyit(this)">
+                <img src="img/grill1.jpg" alt="Kép 2" onclick="megnyit(this)">
+                <img src="img/kert2.jpg" alt="Kép 3" onclick="megnyit(this)">
+                <img src="img/kert_dézsa.jpg" alt="Kép 4" onclick="megnyit(this)">
+                <img src="img/kertb.jpg" alt="Kép 5" onclick="megnyit(this)">
+                <img src="img/medence1.jpg" alt="Kép 6" onclick="megnyit(this)">
+                <img src="img/medence2.jpg" alt="Kép 7" onclick="megnyit(this)">
+            </div>
+            
+            <!-- Overlay (fedőréteg) -->
+            <div class="overlay" id="overlay" onclick="zar()">
+                <img id="nagyKep" alt="Nagy méretű kép">
+            </div>
+            
+            <script>
+                function megnyit(elem) {
+                    var nagyKep = document.getElementById("nagyKep");
+                    nagyKep.src = elem.src;
+                    document.getElementById("overlay").style.display = "flex";
+                }
+            
+                function zar() {
+                    document.getElementById("overlay").style.display = "none";
+                }
+            </script>
+        </div>
+    </section>
+    <section>
+        <h2>Áraink, fizetési módok:</h2>
+        <p>
+            Szállásaink 6.500 Ft/éj áron vehető igénybe. Fizetés a helyszínen érkezéskor, készpénzben. 
+        </p>
+    </section>
+</div>
+</body>
+</html>
